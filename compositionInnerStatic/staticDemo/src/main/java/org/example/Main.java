@@ -2,6 +2,13 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ProductManager manager = new ProductManager();
+        Product product = new Product();
+        product.price = 10;
+        product.name = "";
+        manager.add(product);
+
+        DatabaseHelper.Crud.Delete();
+        DatabaseHelper.Connection.createConnection();
     }
 }
